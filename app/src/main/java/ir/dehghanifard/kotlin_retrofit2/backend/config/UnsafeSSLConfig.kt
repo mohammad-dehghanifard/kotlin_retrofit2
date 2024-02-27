@@ -1,4 +1,4 @@
-package ir.dehghanifard.kotlin_retrofit2.config
+package ir.dehghanifard.kotlin_retrofit2.backend.config
 import android.annotation.SuppressLint
 import okhttp3.OkHttpClient
 import java.security.SecureRandom

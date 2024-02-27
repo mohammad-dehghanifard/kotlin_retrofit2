@@ -4,7 +4,7 @@ import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
-import ir.dehghanifard.kotlin_retrofit2.config.getUnsafeOkHttpClient
+import ir.dehghanifard.kotlin_retrofit2.backend.config.getUnsafeOkHttpClient
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import javax.inject.Singleton
