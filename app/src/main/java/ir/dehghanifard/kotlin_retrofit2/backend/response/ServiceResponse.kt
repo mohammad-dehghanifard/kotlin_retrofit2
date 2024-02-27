@@ -1,8 +1,8 @@
 package ir.dehghanifard.kotlin_retrofit2.backend.response
 
 class ServiceResponse<T>(
-    val data : List<T>?,
-    val status: String?,
-    val message: String?,
-    val totalCount: Long?
+    var data : List<T>? = null,
+    var status: String? = null,
+    var message: String? = null,
+    var totalCount: Long? = null
 )

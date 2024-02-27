@@ -4,6 +4,7 @@ import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
+import ir.dehghanifard.kotlin_retrofit2.backend.api.SliderApi
 import ir.dehghanifard.kotlin_retrofit2.backend.config.getUnsafeOkHttpClient
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
@@ -21,5 +22,11 @@ object ApiModule {
             .client(getUnsafeOkHttpClient().build())
             .addConverterFactory(GsonConverterFactory.create())
             .build()
+    }
+
+    @Provides
+    @Singleton
+    fun provideSliderApi() : SliderApi {
+        return  provideRetrofit().create(SliderApi::class.java)
     }
 }
