@@ -1,6 +1,8 @@
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
+    kotlin("kapt")
+    id("com.google.dagger.hilt.android")
 }
 
 android {
@@ -49,7 +51,24 @@ android {
     }
 }
 
+
 dependencies {
+
+    implementation ("com.squareup.retrofit2:retrofit:2.9.0")
+    implementation("com.squareup.retrofit2:converter-gson:2.9.0")
+
+    // Dagger Core
+    implementation ("com.google.dagger:dagger:2.37")
+    kapt ("com.google.dagger:dagger-compiler:2.37")
+
+// Dagger Android
+    api ("com.google.dagger:dagger-android:2.37")
+    api ("com.google.dagger:dagger-android-support:2.37")
+    kapt ("com.google.dagger:dagger-android-processor:2.37")
+
+    // Dagger - Hilt
+    implementation ("com.google.dagger:hilt-android:2.37")
+    kapt ("com.google.dagger:hilt-android-compiler:2.37")
 
     implementation("androidx.core:core-ktx:1.12.0")
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.7.0")
@@ -66,4 +85,5 @@ dependencies {
     androidTestImplementation("androidx.compose.ui:ui-test-junit4")
     debugImplementation("androidx.compose.ui:ui-tooling")
     debugImplementation("androidx.compose.ui:ui-test-manifest")
+
 }
